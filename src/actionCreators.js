@@ -1,7 +1,7 @@
-export const sendRequest = request => {
+export const sendRequest = query => {
   return {
-    type: 'ADD_REQUEST',
-    request
+    type: 'SEND_QUERY',
+    query
   }
 };
 

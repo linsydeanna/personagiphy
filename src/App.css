@@ -12,9 +12,6 @@ p:hover {
 }
 
 div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin: 0 auto;
   margin-top: 50px;
   width: 300px;

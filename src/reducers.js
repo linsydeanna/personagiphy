@@ -1,16 +1,15 @@
-export const requestsReducer = (state = {}, { type, request, gifs }) => {
+export const queryReducer = (state = {}, { type, query }) => {
   switch (type) {
-    case 'ADD_REQUEST':
-    return [
-      ...state,
-      request
-    ]
+    case 'SEND_QUERY':
+    return {
+      query,
+    }
     default:
       return state;
   }
 };
 
-export const gifsReducer = (state = {}, { type, request, gifs }) => {
+export const gifsReducer = (state = {}, { type, gifs }) => {
   switch (type) {
     case 'UPDATE_GIFS':
     return [

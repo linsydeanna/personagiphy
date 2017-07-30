@@ -9,14 +9,25 @@ import './App.css';
 // Components
 import { PersonalityTypes } from './PersonalityTypes';
 
-const Home = () => (
-  <div className="Home">
+const Home = ({ gifs }) => (
+  <div>
     <PersonalityTypes />
+    {gifs.map(gif =>
+      <iframe
+        key={gif.id}
+        src={gif.embed_url}
+        width="240"
+        height="149"
+        frameBorder="0"
+        className="giphy-embed"
+        allowFullScreen
+        title="abc"
+      >
+      </iframe>)}
   </div>
 );
 
-const mapStateToProps = ({ requests, gifs }) => ({
-  requests,
+const mapStateToProps = ({ gifs }) => ({
   gifs
 });
 

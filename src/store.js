@@ -4,18 +4,18 @@ import { combineReducers, createStore, applyMiddleware } from 'redux';
 import { createEpicMiddleware } from 'redux-observable';
 
 // Reducers
-import { requestsReducer, gifsReducer } from './reducers';
+import { queryReducer, gifsReducer } from './reducers';
 
 // Epics
 import { testEpic } from './epics';
 
 const rootReducer = combineReducers({
-  requests: requestsReducer,
+  query: queryReducer,
   gifs: gifsReducer,
 });
 
 const defaultState = {
-  requests: [],
+  query: {},
   gifs: [],
 };
 
